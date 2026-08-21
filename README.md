@@ -1,28 +1,27 @@
-# Semplice
+# Prism & Pollen
 
-![Theme preview](https://lexingtonthemes.com/OpenGraph/semplice/twitter.png)
-
-
-## Links
-- **Theme specs:** https://lexingtonthemes.com/templates/semplice  
-- **Documentation:** https://lexingtonthemes.com/documentation/getting-started  
-- **Changelog:** https://lexingtonthemes.com/changelog/semplice  
-- **Support:** https://lexingtonthemes.com/legal/support/  
-- **Get the bundle:** https://lexingtonthemes.com  
+Expo Router + Uniwind clothing storefront and knowledge hub (web + native).
 
 ## Requirements
-- Node.js 18 or 20 (LTS recommended)
-- npm
+
+- Node.js 22+ (see `.nvmrc`)
 
 ## Commands
 
-All commands are run from the root of the project, from a terminal:
+| Command | Action |
+| :------ | :----- |
+| `npm install` | Install dependencies |
+| `npm run web` | Dev server (web) |
+| `npm start` | Expo dev server |
+| `npm run build` | Static web export → `dist/` |
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Install dependencies                             |
-| `npm run dev`          | Start local dev server                           |
-| `npm run build`        | Build production site to `./dist/`               |
-| `npm run preview`     | Preview the production build locally             |
-| `npm run astro ...`    | Run Astro CLI commands                           |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+## Routes
+
+- `/` — homepage
+- `/shop`, `/shop/[category]` — catalog
+- `/store/[id]` — product detail
+- `/hub`, `/hub/[tool]` — Canva / Notion / Figma / Higgsfield folders
+
+## Deploy
+
+Netlify builds with `npm run build` (`expo export -p web`) and publishes `dist/`.
